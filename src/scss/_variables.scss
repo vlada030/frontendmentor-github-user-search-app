@@ -1,3 +1,22 @@
-// light mode colors
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
-$colorBlue: #0079FF;
+// light mode colors
+$colorLightOne: #0079FF;
+$colorLightTwo: #697C9A;
+$colorLightThree: #4B6A9B;
+$colorLightFour: #2B3442;
+$colorLightFive: #F6F8FF;
+$colorLightSix: #FEFEFE;
+$colorLightBackground: #f2f2f2;
+
+// dark mode colors
+$colorDarkOne: #0079FF;
+$colorDarkTwo: #FFFFFF;
+$colorDarkThree: #141d2f;
+$colorDarkFour: #1E2A47;
+
+$fontFamily: 'Space Mono', monospace;
+$fontWeightDefault: 400;
+$fontWeightBold: 700;
+$fontSize: 15px;
+$lineHeight: 25px;

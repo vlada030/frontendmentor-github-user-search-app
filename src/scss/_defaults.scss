@@ -6,4 +6,48 @@
     box-sizing: border-box;
 }
 
+body {
+    min-height: 100vh;
+    font-size: $fontSize;
+    font-weight: $fontWeightDefault;
+    line-height: $lineHeight;
+    font-family: $fontFamily;
+
+    display: grid;
+    place-items: center;
+
+    color: $colorLightThree;
+    background-color: $colorLightBackground;
+}
+
+
+h1 {
+    font-size: 26px;
+    line-height: 38px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 22px;
+    line-height: 33px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.container {
+    width: 375px;
+    padding: 31 px 24px;
+}
+
 
