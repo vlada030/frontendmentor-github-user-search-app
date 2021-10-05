@@ -3,15 +3,18 @@
     align-items: center;
     justify-content: space-between;
 
+    margin-bottom: 36px;
+
     .theme {
         display: block;
         border: none;
-        color: $colorLightThree;
         cursor: pointer;
 
         display: flex;
         align-items: center;
         justify-content: space-between;
+        
+        transition: all 0.3s;
         
         & > p {
             font-weight: 700;
@@ -20,18 +23,63 @@
             margin-right: 16px;
         }
         
-        & > img {
+        & > svg {
             width: 20px;
             height: 20px;
+            fill: currentColor;
+        }
+        
+        &--light {
+            color: $colorLightThree;
+            
+            &:hover {
+                color: $colorLightFour;
+            }
+            
+            & > svg {
+                fill: currentColor;
+            }
+        }
+        
+        &--dark {
+            color: $colorDarkTwo;
+            
+            &:hover {
+                color: $colorLightThree;
+                
+                svg {
+                    fill: currentColor;
+                }
+            }
         }
 
-        &:hover {
-            color: $colorLightFour;
+    }
+}
+
+.form {
+    padding: 7px 7px 7px 16px;
+    margin-bottom: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 20px;
+        height: 20px;
+        margin-right: 9px;
+    }
+
+    .form-control {
+        position: relative;
+
+        p {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: $colorRed;
+            background-color: black;
+            z-index: 50;
         }
     }
-
-    .disabled {
-        display: none;
-    }
-
 }

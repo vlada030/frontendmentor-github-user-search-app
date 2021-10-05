@@ -47,7 +47,13 @@ h4 {
 
 .container {
     width: 375px;
-    padding: 31 px 24px;
+    padding: 31px 24px;
+    
+    .disabled {
+        display: none;
+    }
 }
+
+
 
 
