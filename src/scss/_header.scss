@@ -1,3 +1,7 @@
+header {
+    margin-bottom: 16px;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -52,17 +56,22 @@
                 }
             }
         }
+    }
 
+    .disabled {
+        display: none;
     }
 }
 
+
 .form {
+    border-radius: 15px;
+    box-shadow: 0px 16px 30px -10px rgba($colorBoxShadow, 0.2);
     padding: 7px 7px 7px 16px;
-    margin-bottom: 16px;
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     img {
         width: 20px;
@@ -73,6 +82,25 @@
     .form-control {
         position: relative;
 
+        input {
+            width: 185px;
+            color: $colorLightFour;
+            letter-spacing: 1px;
+            border: none;
+            padding: 3px 0;
+
+            &:focus {
+                outline: none;
+            }
+
+            &::placeholder {
+                font-size: 13px;
+                color: $colorLightThree;
+                letter-spacing: 1px;
+            }
+        }
+
+
         p {
             position: absolute;
             top: 0;
@@ -80,6 +108,28 @@
             color: $colorRed;
             background-color: black;
             z-index: 50;
+        }
+        
+        &:focus-within + button {
+            background-color: $colorButtonHover;
+        }
+    }
+
+
+    button {
+        font-size: 14px;
+        color: $colorDarkTwo;
+        font-weight: $fontWeightBold;
+        line-height: 21px;
+        background-color: $colorLightOne;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 12.5px 18px;
+        transition: all 0.3s;
+
+        &:hover {
+            background-color: $colorButtonHover;
         }
     }
 }
