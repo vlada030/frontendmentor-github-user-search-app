@@ -17,7 +17,7 @@ body {
     place-items: center;
 
     color: $colorLightThree;
-    background-color: $colorLightBackground;
+    background-color: $colorLightFive;
 }
 
 
@@ -48,6 +48,16 @@ h4 {
 .container {
     width: 375px;
     padding: 31px 24px 79px 24px;
+
+    @include media(tablet) {
+        width: 768px;
+        padding: 140px 98px 236px 97px;
+    }
+
+    @include media(desktop) {
+        width: 1440px;
+        padding: 144px 355px 145px 355px;
+    }
     
 }
 

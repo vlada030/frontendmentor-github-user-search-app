@@ -1,5 +1,9 @@
 header {
     margin-bottom: 16px;
+
+    @include media(tablet) {
+        margin-bottom: 24px;
+    }
 }
 
 .logo {
@@ -13,6 +17,7 @@ header {
         display: block;
         border: none;
         cursor: pointer;
+        background-color: inherit;
 
         display: flex;
         align-items: center;
@@ -21,9 +26,10 @@ header {
         transition: all 0.3s;
         
         & > p {
+            font-size: 13px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 2.5px;
+            letter-spacing: 1.2px;
             margin-right: 16px;
         }
         
@@ -67,20 +73,35 @@ header {
 .form {
     border-radius: 15px;
     box-shadow: 0px 16px 30px -10px rgba($colorBoxShadow, 0.2);
+    background-color: $colorLightSix;
     padding: 7px 7px 7px 16px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
+    @include media(tablet) {
+        padding: 9.5px 10px 9.5px 32px;
+    }
+
     img {
         width: 20px;
         height: 20px;
         margin-right: 9px;
+
+        @include media(tablet) {
+            width: 24px;
+            height: 24px;
+            margin-right: 24px;
+        }
     }
 
     .form-control {
         position: relative;
+
+        @include media(tablet) {
+            margin-right: auto;
+        }
 
         input {
             width: 185px;
@@ -97,6 +118,13 @@ header {
                 font-size: 13px;
                 color: $colorLightThree;
                 letter-spacing: 1px;
+            }
+
+            @include media(tablet) {
+                width: 254px;
+                &::placeholder {
+                    font-size: 18px;
+                }
             }
         }
 
@@ -130,6 +158,13 @@ header {
 
         &:hover {
             background-color: $colorButtonHover;
+        }
+
+        @include media(tablet) {
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.7px;
+            padding: 12.5px 23px 13.5px 24px;
         }
     }
 }

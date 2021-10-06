@@ -1,5 +1,7 @@
 .main {
     padding: 32px 24px;
+    background-color: $colorLightSix;
+    border-radius: 15px;
     box-shadow: 0px 16px 30px -10px rgba($colorBoxShadow, 0.2);
 
     .user {
@@ -12,6 +14,7 @@
         img {
             width: 70px;
             height: 70px;
+            border-radius: 50%;
             margin-right: 19px;
         }
 
@@ -23,6 +26,7 @@
 
             p {
                 font-size: 13px;
+                line-height: 19px;
                 color: $colorLightTwo;
 
                 &:first-of-type {
@@ -38,11 +42,14 @@
     }
 
     .user-stats {
+        text-align: center;
+        background-color: $colorLightFive;
+        border-radius: 10px;
+
         display: flex;
         align-items: center;
         justify-content: space-around;
 
-        text-align: center;
         padding: 18px 15px;
         margin-bottom: 24px;
 
