@@ -3,9 +3,26 @@
     background-color: $colorLightSix;
     border-radius: 15px;
     box-shadow: 0px 16px 30px -10px rgba($colorBoxShadow, 0.2);
-
+    
+    & > img {
+        width: 117px;
+        height: 117px;
+        border-radius: 50%;
+        margin-right: 37px;
+        display: none;
+    }
     @include media(tablet) {
         padding: 40px;
+    }
+
+    @include media(desktop) {
+        padding: 48px;
+        display: flex;
+        align-items: flex-start;
+
+        & > img {
+            display: inline-block;
+        }
     }
 
     .user {
@@ -29,6 +46,10 @@
                 height: 117px;
                 margin-right: 41px;
             }
+
+            @include media(desktop) {
+                display: none;
+            }
         }
 
         .user-details {
@@ -41,11 +62,11 @@
                 font-size: 13px;
                 line-height: 19px;
                 color: $colorLightTwo;
-
-                &:first-of-type {
-                    color: $colorLightOne;
-                }
             }
+
+            div > p {
+             color: $colorLightOne;
+            } 
 
             @include media(tablet) {
                 h3 {
@@ -56,12 +77,19 @@
                 p {
                     font-size: 16px;
                     line-height: 23.7px;
-
-                    &:last-of-type {
-                        font-size: 15px;
-                        line-height: 22.22px;
-                    }
                 }
+
+                div > p {
+                    font-size: 15px;
+                        line-height: 22.22px;
+                   } 
+            }
+
+            @include media(desktop) {
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
             }
             
         }
