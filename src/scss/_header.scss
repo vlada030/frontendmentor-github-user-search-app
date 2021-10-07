@@ -100,7 +100,10 @@ header {
         position: relative;
 
         @include media(tablet) {
-            margin-right: auto;
+            //margin-right: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         input {
@@ -109,6 +112,8 @@ header {
             letter-spacing: 1px;
             border: none;
             padding: 3px 0;
+            vertical-align: top;
+            cursor: pointer;
 
             &:focus {
                 outline: none;
@@ -118,6 +123,7 @@ header {
                 font-size: 13px;
                 color: $colorLightThree;
                 letter-spacing: 1px;
+                
             }
 
             @include media(tablet) {
@@ -128,14 +134,24 @@ header {
             }
         }
 
-
         p {
             position: absolute;
             top: 0;
             right: 0;
+
+            font-size: 13px;
             color: $colorRed;
-            background-color: black;
+            font-weight: $fontWeightBold;
+            line-height: 22px;
+            background-color: $colorLightSix;
+            padding-left: 5px;
+
             z-index: 50;
+
+            @include media(tablet) {
+               position: relative;
+               font-size: 15px;
+            }
         }
         
         &:focus-within + button {
