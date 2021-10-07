@@ -13,6 +13,14 @@ header {
 
     margin-bottom: 36px;
 
+    @include media(desktop) {
+        margin-bottom: 35px;
+    }
+
+    h1 {
+        color: $colorLogoDark;
+    }
+
     .theme {
         display: block;
         border: none;
@@ -22,9 +30,9 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
+
         transition: all 0.3s;
-        
+
         & > p {
             font-size: 13px;
             font-weight: 700;
@@ -32,31 +40,31 @@ header {
             letter-spacing: 1.2px;
             margin-right: 16px;
         }
-        
+
         & > svg {
             width: 20px;
             height: 20px;
             fill: currentColor;
         }
-        
+
         &--light {
             color: $colorLightThree;
-            
+
             &:hover {
                 color: $colorLightFour;
             }
-            
+
             & > svg {
                 fill: currentColor;
             }
         }
-        
+
         &--dark {
             color: $colorDarkTwo;
-            
+
             &:hover {
                 color: $colorLightThree;
-                
+
                 svg {
                     fill: currentColor;
                 }
@@ -68,7 +76,6 @@ header {
         display: none;
     }
 }
-
 
 .form {
     border-radius: 15px;
@@ -98,9 +105,9 @@ header {
 
     .form-control {
         position: relative;
+        width: 100%;
 
         @include media(tablet) {
-            //margin-right: auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -123,13 +130,15 @@ header {
                 font-size: 13px;
                 color: $colorLightThree;
                 letter-spacing: 1px;
-                
             }
 
             @include media(tablet) {
                 width: 254px;
+                font-size: 18px;
+                color: $colorLightThree;
                 &::placeholder {
                     font-size: 18px;
+                    color: $colorLightThree;
                 }
             }
         }
@@ -144,21 +153,21 @@ header {
             font-weight: $fontWeightBold;
             line-height: 22px;
             background-color: $colorLightSix;
-            padding-left: 5px;
+            padding: 0px 10px 0px 5px;
 
             z-index: 50;
 
             @include media(tablet) {
-               position: relative;
-               font-size: 15px;
+                position: relative;
+                font-size: 15px;
+                padding-right: 24px;
             }
         }
-        
+
         &:focus-within + button {
             background-color: $colorButtonHover;
         }
     }
-
 
     button {
         font-size: 14px;
