@@ -18,8 +18,116 @@ body {
 
     color: $colorLightThree;
     background-color: $colorLightFive;
+
+    // DARK MODE COLORS
+    &.dark {
+        color: $colorDarkTwo;
+        background-color: $colorDarkThree;
+
+        .logo {
+            color: inherit;
+
+            h1 {
+                color: inherit;
+            }
+        }
+
+        .form {
+            background-color: $colorDarkFour;
+            box-shadow: none;
+
+            input {
+                background-color: inherit;
+                color: inherit;
+
+                &::placeholder {
+                    color: $colorDarkTwo;
+                }
+            }
+        }
+
+        .main {
+            background-color: $colorDarkFour;
+            box-shadow: none;
+
+            .user .user-details {
+                color: $colorDarkTwo;
+                h3 {
+                    color: inherit;
+                }
+
+                p {
+                    &:last-of-type {
+                        color: inherit;
+                    }
+                }
+            }
+
+            .user-stats {
+                background-color: $colorDarkThree;
+                h3 {
+                    color: inherit;
+                }
+            }
+        }
+    }
 }
 
+// https://medium.com/samsung-internet-dev/responsive-design-the-dark-mode-10f8f9ca2c2
+
+@media (prefers-color-scheme: dark) {
+    body.systemDarkPreference {
+        color: $colorDarkTwo;
+        background-color: $colorDarkThree;
+
+        .logo {
+            color: inherit;
+
+            h1 {
+                color: inherit;
+            }
+        }
+
+        .form {
+            background-color: $colorDarkFour;
+            box-shadow: none;
+
+            input {
+                background-color: inherit;
+                color: inherit;
+
+                &::placeholder {
+                    color: $colorDarkTwo;
+                }
+            }
+        }
+
+        .main {
+            background-color: $colorDarkFour;
+            box-shadow: none;
+
+            .user .user-details {
+                color: $colorDarkTwo;
+                h3 {
+                    color: inherit;
+                }
+
+                p {
+                    &:last-of-type {
+                        color: inherit;
+                    }
+                }
+            }
+
+            .user-stats {
+                background-color: $colorDarkThree;
+                h3 {
+                    color: inherit;
+                }
+            }
+        }
+    }
+}
 
 h1 {
     font-size: 26px;
@@ -58,12 +166,8 @@ h4 {
         width: 1440px;
         padding: 144px 355px 145px 355px;
     }
-    
 }
 
 .disabled {
     display: none;
 }
-
-
-
