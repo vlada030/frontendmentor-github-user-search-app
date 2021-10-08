@@ -27,28 +27,33 @@ header {
         cursor: pointer;
         background-color: inherit;
 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        & > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-        transition: all 0.3s;
-
-        & > p {
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            margin-right: 16px;
+            p {
+                font-size: 13px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1.2px;
+                margin-right: 16px;
+            }
+    
+            svg {
+                width: 20px;
+                height: 20px;
+                fill: currentColor;
+            }
         }
 
-        & > svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
+        .disabled {
+            display: none;
         }
 
         &--light {
             color: $colorLightThree;
+            transition: all 0.3s;
 
             &:hover {
                 color: $colorLightFour;
@@ -61,6 +66,7 @@ header {
 
         &--dark {
             color: $colorDarkTwo;
+            transition: all 0.3s;
 
             &:hover {
                 color: $colorLightThree;
@@ -72,9 +78,7 @@ header {
         }
     }
 
-    .disabled {
-        display: none;
-    }
+    
 }
 
 .form {
