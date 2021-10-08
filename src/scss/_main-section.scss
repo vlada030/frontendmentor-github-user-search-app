@@ -11,6 +11,10 @@
         margin-right: 37px;
         display: none;
     }
+    .wrapper {
+        width: 100%;
+    }
+
     @include media(tablet) {
         padding: 40px;
     }
@@ -208,6 +212,10 @@
                 font-size: 15px;
                 line-height: 22.22px;
             }
+        }
+
+        @include media(desktop) {
+            grid-column-gap: 40px;
         }
     }
 
