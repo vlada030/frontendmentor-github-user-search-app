@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
-    entry: { index: path.resolve(__dirname, "src", "main.js") },
+    entry: { index: path.resolve(__dirname, "src/js/", "main.js") },
     output: {
         path: path.resolve(__dirname, "build"),
         assetModuleFilename: "assets/[hash][ext][query]",

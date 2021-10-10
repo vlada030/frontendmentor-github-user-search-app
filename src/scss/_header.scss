@@ -52,11 +52,11 @@ header {
         }
 
         &--light {
-            color: $colorLightThree;
+            color: $colorLightFour;
             transition: all 0.3s;
 
             &:hover {
-                color: $colorLightFour;
+                color: $colorLightThree;
             }
 
             & > svg {
@@ -134,6 +134,7 @@ header {
                 font-size: 13px;
                 color: $colorLightThree;
                 letter-spacing: 1px;
+                opacity: 1;
             }
 
             @include media(tablet) {

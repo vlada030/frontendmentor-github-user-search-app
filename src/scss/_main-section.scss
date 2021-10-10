@@ -183,6 +183,7 @@
         a {
             text-decoration: none;
             color: inherit;
+            pointer-events: inherit;
 
             &:visited {
                 color: inherit;
@@ -219,7 +220,7 @@
         }
     }
 
-    .not-available {
-        color: rgba($colorLightThree, 0.5);
-    }
+    // .not-available {
+    //     color: rgba($colorLightThree, 0.5);
+    // }
 }

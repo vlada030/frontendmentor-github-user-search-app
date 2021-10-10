@@ -78,6 +78,10 @@ body.dark {
                     color: $colorDarkTwo;
                 }
             }
+
+            p {
+                background-color: inherit;
+            }
         }
 
         .main {
@@ -147,5 +151,16 @@ h4 {
 }
 
 .disabled {
-    display: none;
+    display: none !important;
+}
+
+.disabled-link {
+    pointer-events: none;
+}
+
+.not-available {
+    color: rgba($colorLightThree, 0.5);
+    a {
+        pointer-events: none !important;
+    }
 }
